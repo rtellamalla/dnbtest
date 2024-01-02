@@ -1,0 +1,35 @@
+---
+pipeline:
+  projectIdentifier: "default_project"
+  orgIdentifier: "default"
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: "Github_authent"
+        build: "<+input>"
+  stages:
+  - stage:
+      name: "checkout"
+      identifier: "checkout"
+      description: ""
+      type: "CI"
+      spec:
+        cloneCodebase: true
+        platform:
+          os: "Linux"
+          arch: "Amd64"
+        runtime:
+          type: "Cloud"
+          spec: {}
+        execution:
+          steps:
+          - step:
+              type: "Run"
+              name: "Run_1"
+              identifier: "Run_1"
+              spec:
+                shell: "Sh"
+                command: "apt-get install docker"
+  identifier: "newtest_Clone"
+  name: "newtest - Clone"
