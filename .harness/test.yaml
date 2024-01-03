@@ -1,0 +1,12 @@
+inputSet:
+  name: test
+  identifier: test
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: newtest
+    properties:
+      ci:
+        codebase:
+          build: <+input>
+  object Object: pipeline.properties.ci.codebase
