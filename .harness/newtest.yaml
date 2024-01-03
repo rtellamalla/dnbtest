@@ -1,5 +1,5 @@
 pipeline:
-  name: newtest
+  name: dnbtest
   identifier: newtest
   projectIdentifier: default_project
   orgIdentifier: default
