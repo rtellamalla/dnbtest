@@ -32,5 +32,16 @@ pipeline:
                     command: |-
                       apt-get install docker
                       apt-get install git
+              - step:
+                  type: GitClone
+                  name: GitClone_1
+                  identifier: GitClone_1
+                  spec:
+                    connectorRef: Github_authent
+                    repoName: dnbtest
+                    build:
+                      type: branch
+                      spec:
+                        branch: main
   identifier: newtest_Clone
   name: newtest - Clone
